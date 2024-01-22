@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
         if (matResult == null)
             matResult = new Mat(matInput.rows(), matInput.cols(), matInput.type());
 
-        //ConvertRGBtoGray(matInput.getNativeObjAddr(), matResult.getNativeObjAddr());
+        ConvertRGBtoGray(matInput.getNativeObjAddr(), matResult.getNativeObjAddr());
         Core.flip(matInput, matInput, 1);
 
         detect(cascadeClassifier_face, cascadeClassifier_eye, matInput.getNativeObjAddr(),
