@@ -12,6 +12,7 @@ import android.os.Build;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -72,6 +73,10 @@ public class MainActivity extends AppCompatActivity
         }
     };
 
+    private Button gray;
+    private Button red;
+    private Button blue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +87,10 @@ public class MainActivity extends AppCompatActivity
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_main);
+
+        gray = findViewById(R.id.gray);
+        red = findViewById(R.id.red);
+        blue = findViewById(R.id.blue);
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.activity_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
