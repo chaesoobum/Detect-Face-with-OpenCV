@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity
     private Button gray;
     private Button red;
     private Button blue;
+    private Button green;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity
         gray = findViewById(R.id.gray);
         red = findViewById(R.id.red);
         blue = findViewById(R.id.blue);
+        green = findViewById(R.id.green);
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.activity_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
